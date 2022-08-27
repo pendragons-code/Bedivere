@@ -41,19 +41,7 @@ module.exports = {
 			    let input = await page.$(
        			    '#main > footer > div._2BU3P.tm2tP.copyable-area > div > span:nth-child(2) > div > div._2lMWa > div.p3_M1 > div > div'
     				)
-
-   			 let messages = [
-        		'Spam',
-		        'Its a spam attack',
-		        'Have a great time',
-		        '💚💚💚',
-		        '🐱‍🚀🐱‍🚀🐱‍🚀',
-		        '👾👾👾',
-		        '🤖🤖🤖',
-			]
-
 			    for (let i = 0; i < 150; i++) {
-			        let message = messages[Math.floor(Math.random() * messages.length)]
 			        await input.type(message)
 			        await page.keyboard.press('Enter')
 				    }
